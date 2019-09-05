@@ -112,3 +112,64 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+/* -------------------------------------------------- */
+
+/* !!!! - This doesn't seem correct? */
+const article = document.querySelector(".articles");
+
+/* Step 1: Create a function that creates a component. You will want your component to look like the template below: */
+
+function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+  const article = document.createElement("div");
+  const articleSection = document.createElement("div");
+  const articleTitle = document.createElement("h2");
+  const articleDate = document.createElement("p");
+  const buttonOpen = document.createElement("span");
+  const container = document.createElement("div");
+  const paraOne = document.createElement("p");
+  const paraTwo = document.createElement("p");
+  const paraThree = document.createElement("p");
+
+
+  article.appendChild(articleSection);
+  articleSection.appendChild(articleTitle);
+  articleSection.appendChild(articleDate);
+  articleSection.appendChild(buttonOpen);
+  articleSection.appendChild(container);
+  container.appendChild(paraOne);
+  container.appendChild(paraTwo);
+  container.appendChild(paraThree);
+
+/* Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div. */
+/* Step 3: return the entire component. */
+
+  buttonOpen.addEventListener("click", () => {
+    article.classList.toggle("toggle-on");
+    container.classList.toggle("p-container-open");
+  })
+  return article
+}
+
+/* Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div. */
+
+data.forEach(data => {
+  article.appendChild(createArticle(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph));
+});
+
+/* Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article. */
+
+article.classList.add("article")
+articleSection.classList.add("article-open")
+buttonOpen.classList.add("expandButton")
+container.classList.add("p-container")
+
+const open = "\u2b9f \u2b9f \u2b9f";
+articleTitle.textContent = title;
+articleDate.textContent = date;
+paraOne.textContent = firstParagraph;
+paraTwo.textContent = secondParagraph;
+paraThree.textContent = thirdParagraph;
+buttonOpen.textContent = open;
+
+/* -------------------------------------------------- */
