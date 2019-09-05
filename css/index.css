@@ -3,19 +3,19 @@
   font-family: 'Roboto';
   font-style: italic;
   font-weight: 400;
-  src: local('Roboto Italic'), local('Roboto-Italic'), url(https://fonts.gstatic.com/s/roboto/v20/KFOkCnqEu92Fr1Mu51xIIzc.ttf) format('truetype');
+  src: local('Roboto Italic'), local('Roboto-Italic'), url(https://fonts.gstatic.com/s/roboto/v19/KFOkCnqEu92Fr1Mu51xIIzc.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
 }
 /* Below this line is where you will start your work */
 /* It is important to note, you will not be writing any CSS in this file*/
@@ -34,74 +34,6 @@
 .header h1 {
   margin: 0;
   font-size: 48px;
-}
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto';
-  background-color: #fffef7;
-}
-/* Adding */
-.articles {
-  margin-top: 95px;
-}
-.articles .toggle-on {
-  margin: 20px 10%;
-  padding: 0 20px 25px;
-  border: 1px solid lightgrey;
-  border-radius: 10px;
-  background-color: white;
-  position: relative;
-  height: auto;
-  overflow: hidden;
-  box-shadow: 2px 2px 2px lightgrey;
-}
-.article {
-  margin: 20px 10%;
-  padding: 0 20px 25px;
-  border: 1px solid lightgrey;
-  border-radius: 10px;
-  background-color: white;
-  position: relative;
-  height: 100px;
-  overflow: hidden;
-  box-shadow: 2px 2px 2px lightgrey;
-}
-.article .p-container {
-  display: none;
-  transition: all 1.4s ease;
-}
-.article .p-container-open {
-  display: block;
-  transition: all 1.4s ease;
-}
-.article h2 {
-  font-size: 28px;
-  padding: 0;
-  margin: 15px 0 0;
-}
-.article .date {
-  margin: 0;
-  font-size: 14px;
-}
-.article .close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-.article .expandButton {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  font-size: 12px;
-  color: grey;
-  cursor: pointer;
-  transform: translate(-50%);
-  background-color: white;
-}
-.article-open {
-  height: 400px;
 }
 .menu-button {
   position: absolute;
@@ -131,4 +63,52 @@ body {
 }
 .menu--open {
   display: block;
+}
+.articles {
+  margin-top: 95px;
+}
+.article {
+  margin: 20px 10%;
+  padding: 0 20px 25px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  box-shadow: 2px 2px 2px lightgrey;
+}
+.article h2 {
+  font-size: 28px;
+  padding: 0;
+  margin: 15px 0 0;
+}
+.article .date {
+  margin: 0;
+  font-size: 14px;
+}
+.article .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.article .expandButton {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 12px;
+  color: grey;
+  cursor: pointer;
+  transform: translate(-50%);
+  background-color: white;
+}
+.article-open {
+  height: 400px;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  background-color: #fffef7;
 }

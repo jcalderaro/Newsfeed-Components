@@ -1,12 +1,12 @@
 # Newsfeed-Components
 
-In this project we are going to be building a news feed reader. The goal is to have a collapsing menu, and expandable news articles. The CSS and some of the HTML is already done for you, you simply need to connect the pieces. After the CSS is connected it is time to move on to building out our components using JavaScript. We will be adding common functionality and styling to build reusable components.
+In this project we are going to be building a news feed reader. The goal is to have a collapsing menu, and expandable news articles. The HTML and CSS is already done for you, you simply need to connect the pieces. After the CSS is connected it is time to move on to building out our components using JavaScript. We will be adding common functionality and styling to build reusable components.
 
 ### Need to know:
 * CSS (LESS):
   * @import
 * JavaScript:
-  * Creating DOM components with Javascript Functions.
+  * ES6 classes and the constructor function.
 * DOM
   * Element selection
   * Basic DOM manipulation
@@ -17,7 +17,7 @@ In this project we are going to be building a news feed reader. The goal is to h
 **Follow these steps to set up and work on your project:**
 
 * [ ] Create a forked copy of this project.
-* [ ] Add your team lead as collaborator on Github.
+* [ ] Add your project manager as collaborator on Github.
 * [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
 * [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
 * [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
@@ -26,26 +26,27 @@ In this project we are going to be building a news feed reader. The goal is to h
 **Follow these steps for completing your project.**
 
 * [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
-* [ ] Add your team lead as a reviewer on the pull-request
-* [ ] Your team lead will count the project as complete by merging the branch back into master.
+* [ ] Add your project manager as a reviewer on the pull-request
+* [ ] Your project manager will count the project as complete by merging the branch back into master.
 
 ### Preprocessor Setup
 
   * Run `less-watch-compiler less css index.less` from the top level of the Newsfeed-Components folder. 
   * Open index.html in your browser
 
-### Part 1: The Articles Component
-* Import `Article.less` from the correct path into index.less (follow the example for `Header.less` if you’re not sure how to write the correct path)
-* Follow the instructions found in the Articles.js file to complete the JavaScript functionality and add the components to the DOM.
 
-### Part 2: Add Articles
-
-* Now that we have our components built, add a few articles of your own to the data array. Notice how our JavaScript code automatically creates the new articles and adds the styling and functionality we just built to them. This is the power of components. Write the code once and add as many components as you want all while maintaining the functionality we built!
-
-### Part 3: The Menu
+### Part 1: The Menu
 
 * Import `Menu.less` from the correct path into index.less (follow the example for `Header.less` if you’re not sure how to write the correct path)
-* Follow the instructions found in the Menu.js file to complete the JavaScript functionality. 
+* Follow the instructions found in the Menu.js file to complete the JavaScript functionality.  NOTE: Start near the bottom of the page by looking for `const menu`.
+
+### Part 2: The Articles Component
+* Import `Article.less` from the correct path into index.less (follow the example for `Header.less` if you’re not sure how to write the correct path)
+* Follow the instructions found in the Articles.js file to complete the JavaScript functionality.  NOTE: Start near the bottom of the page by looking for `let articles`.
+
+### Part 3: Add Articles
+
+* Now that we have our components built, add a few articles of your own to the HTML. Notice how our JavaScript code automatically selects the new articles and adds the styling and functionality we just built to them. This is the power of components. Write the code once and add as many components as you want all while maintaining the functionality we built!
 
 ### Stretch Goals:
 
@@ -53,7 +54,7 @@ If you complete the main goals of the page let's play around with some cool anim
 
 A few things to check out: 
 * Native CSS Animations. 
-  * CSS has the ability to animate elements using a number of different properties. Check out `transform` and `transition`, and `animation`. A word of warning, these CSS properties will act differently on different browsers, so always read and see if you need a `browser prefix` in order to animate properly. 
+  * CSS has the ability to animate elements using a number of different properties. Check out `transform` and `transition`, and `animate`. A word of warning, these CSS properties will act differently on different browsers, so always read and see if you need a `browser prefix` in order to animate properly. 
   * https://css-tricks.com/almanac/properties/a/animation/
 * jQuery
   * jQuery is an extremely popular JavaScript library, in fact most of the native DOM manipulation we know and love, came from the jQuery library. It is worth getting a little familiar with it. The jQuery library is massive, and part of it is an animation library. jQuery gives us a fantastic method called `.animate()`. There are also simpler methods such as `slideDown` `slideUp`, `slideToggle`, `show`, `hide` and more.
