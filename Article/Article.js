@@ -121,10 +121,11 @@ const article = document.querySelector(".articles");
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: */
 
 function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
-  /*console.log('title', title); */
+
+  console.log('title', title);
 
   const article = document.createElement("div");
-  const articleSection = document.createElement("div");
+  const articleSection = document.createElement("div"); /* Check */ 
   const articleTitle = document.createElement("h2");
   const articleDate = document.createElement("p");
   const buttonOpen = document.createElement("span");
@@ -138,9 +139,6 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
   articleTitle.innerText = firstParagraph;
   articleTitle.innerText = secondParagraph;
   articleTitle.innerText = thirdParagraph;
-
-
-
 
   article.appendChild(articleSection);
   articleSection.appendChild(articleTitle);
@@ -172,7 +170,7 @@ data.forEach(data => {
 
 /* 
 article.classList.add("article")
-articleSection.classList.add("article-open")
+articleSection.classList.add("article-open")    
 buttonOpen.classList.add("expandButton")
 container.classList.add("p-container")
 
